@@ -1,0 +1,42 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-09-02 17:18:12.318342",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "required_documents",
+  "is_mandatory"
+ ],
+ "fields": [
+  {
+   "columns": 9,
+   "fieldname": "required_documents",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Required Documents ",
+   "options": "Lead KYC Documents"
+  },
+  {
+   "columns": 1,
+   "default": "0",
+   "fieldname": "is_mandatory",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Is Mandatory"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-09-02 17:38:40.182892",
+ "modified_by": "Administrator",
+ "module": "Padmavati_CRM",
+ "name": "Customer Group KYC Table",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

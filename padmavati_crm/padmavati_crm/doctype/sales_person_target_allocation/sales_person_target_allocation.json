@@ -1,0 +1,173 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "hash",
+ "creation": "2024-09-03 11:59:28.110114",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "area_details_section",
+  "country",
+  "districtarea",
+  "designation",
+  "column_break_lfbk",
+  "state",
+  "street",
+  "section_break_aafo",
+  "item_target_table",
+  "target_details_section",
+  "include_sundays",
+  "consider_holiday_list",
+  "from",
+  "to",
+  "column_break_gldj",
+  "holiday_list",
+  "total_holidays",
+  "section_break_liva",
+  "sales_person_list",
+  "target_overview_tab",
+  "target_summary"
+ ],
+ "fields": [
+  {
+   "fieldname": "column_break_lfbk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "districtarea",
+   "fieldtype": "Link",
+   "label": "District/Area",
+   "options": "Geographic Location"
+  },
+  {
+   "fieldname": "designation",
+   "fieldtype": "Link",
+   "label": "Designation",
+   "options": "Designation"
+  },
+  {
+   "fieldname": "area_details_section",
+   "fieldtype": "Section Break",
+   "label": "Details "
+  },
+  {
+   "fieldname": "street",
+   "fieldtype": "Link",
+   "label": "Street",
+   "options": "Geographic Location"
+  },
+  {
+   "fieldname": "section_break_liva",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "target_details_section",
+   "fieldtype": "Section Break",
+   "label": "Target Details"
+  },
+  {
+   "fieldname": "from",
+   "fieldtype": "Date",
+   "label": "From"
+  },
+  {
+   "fieldname": "column_break_gldj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "to",
+   "fieldtype": "Date",
+   "label": "To"
+  },
+  {
+   "depends_on": "eval:doc.consider_holiday_list === 1;",
+   "fieldname": "holiday_list",
+   "fieldtype": "Link",
+   "label": "Holiday List",
+   "options": "Holiday List",
+   "read_only": 1
+  },
+  {
+   "fieldname": "country",
+   "fieldtype": "Link",
+   "label": "Country",
+   "options": "Geographic Location"
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Link",
+   "label": "State",
+   "options": "Geographic Location"
+  },
+  {
+   "fieldname": "total_holidays",
+   "fieldtype": "Data",
+   "label": "Total Holidays",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_aafo",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "sales_person_list",
+   "fieldtype": "Table",
+   "label": "Sales Person List",
+   "options": "Employee Table"
+  },
+  {
+   "fieldname": "item_target_table",
+   "fieldtype": "Table",
+   "label": "Item Target",
+   "options": "Item Group Target"
+  },
+  {
+   "default": "0",
+   "fieldname": "include_sundays",
+   "fieldtype": "Check",
+   "label": "Include Sundays"
+  },
+  {
+   "default": "0",
+   "fieldname": "consider_holiday_list",
+   "fieldtype": "Check",
+   "label": "Consider Holiday List"
+  },
+  {
+   "fieldname": "target_overview_tab",
+   "fieldtype": "Tab Break",
+   "label": "Target Overview"
+  },
+  {
+   "fieldname": "target_summary",
+   "fieldtype": "Table",
+   "label": "Target Summary",
+   "options": "Sales Person Targets Table"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-09-05 17:28:26.458240",
+ "modified_by": "Administrator",
+ "module": "Padmavati_CRM",
+ "name": "Sales Person Target Allocation",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,97 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-08-30 11:49:03.459168",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "route_tab",
+  "route_details",
+  "section_break_irwb",
+  "sales_officer",
+  "daily_order_target",
+  "column_break_nqcl",
+  "petrol_allowance",
+  "daily_shop_visit_target",
+  "shops_tab",
+  "fetch_shops"
+ ],
+ "fields": [
+  {
+   "fieldname": "route_tab",
+   "fieldtype": "Tab Break",
+   "label": "Route"
+  },
+  {
+   "fieldname": "sales_officer",
+   "fieldtype": "Link",
+   "label": "Sales Officer",
+   "options": "Sales Person"
+  },
+  {
+   "description": "Set the number of orders a Sales Officer must achieve daily",
+   "fieldname": "daily_order_target",
+   "fieldtype": "Int",
+   "label": "Daily Order Target"
+  },
+  {
+   "fieldname": "column_break_nqcl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "petrol_allowance",
+   "fieldtype": "Float",
+   "label": "Petrol Allowance"
+  },
+  {
+   "description": "Set the number of Shop Visit a Sales Officer must achieve daily",
+   "fieldname": "daily_shop_visit_target",
+   "fieldtype": "Int",
+   "label": "Daily Shop Visit Target"
+  },
+  {
+   "fieldname": "shops_tab",
+   "fieldtype": "Tab Break",
+   "label": "Shops"
+  },
+  {
+   "fieldname": "fetch_shops",
+   "fieldtype": "Button",
+   "label": "Fetch Shops"
+  },
+  {
+   "fieldname": "route_details",
+   "fieldtype": "Table",
+   "label": "Route Details",
+   "options": "Route Distance Tracker"
+  },
+  {
+   "fieldname": "section_break_irwb",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-08-30 15:25:41.313588",
+ "modified_by": "Administrator",
+ "module": "Padmavati_CRM",
+ "name": "Sales Route Assignment",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,48 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-08-30 14:39:59.858700",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "from",
+  "to",
+  "total_distancekms"
+ ],
+ "fields": [
+  {
+   "columns": 5,
+   "fieldname": "from",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "From "
+  },
+  {
+   "columns": 4,
+   "fieldname": "to",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "To"
+  },
+  {
+   "columns": 2,
+   "fieldname": "total_distancekms",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Total Distance(kms)"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-08-30 15:53:50.751520",
+ "modified_by": "Administrator",
+ "module": "Padmavati_CRM",
+ "name": "Route Distance Tracker",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,123 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "format:{location_name}-{location_code}",
+ "creation": "2024-09-02 16:17:43.560295",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "location_name",
+  "parent_location",
+  "location_abbr",
+  "column_break_ejij",
+  "is_group",
+  "location_type",
+  "location_code",
+  "lft",
+  "rgt",
+  "old_parent",
+  "parent_geographic_location"
+ ],
+ "fields": [
+  {
+   "fieldname": "location_name",
+   "fieldtype": "Data",
+   "label": "Location Name"
+  },
+  {
+   "fieldname": "parent_location",
+   "fieldtype": "Link",
+   "label": "Parent Location",
+   "options": "Geographic Location"
+  },
+  {
+   "fieldname": "column_break_ejij",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_group",
+   "fieldtype": "Check",
+   "label": "Is Group"
+  },
+  {
+   "fieldname": "location_type",
+   "fieldtype": "Link",
+   "label": "Location Type",
+   "options": "Location Type"
+  },
+  {
+   "fieldname": "location_code",
+   "fieldtype": "Int",
+   "label": "Location Code"
+  },
+  {
+   "fieldname": "lft",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Left",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "rgt",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Right",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_group",
+   "fieldtype": "Check",
+   "label": "Is Group"
+  },
+  {
+   "fieldname": "old_parent",
+   "fieldtype": "Link",
+   "label": "Old Parent",
+   "options": "Geographic Location"
+  },
+  {
+   "fieldname": "parent_geographic_location",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "label": "Parent Geographic Location",
+   "options": "Geographic Location"
+  },
+  {
+   "fieldname": "location_abbr",
+   "fieldtype": "Data",
+   "label": "Location Abbr"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_tree": 1,
+ "links": [],
+ "modified": "2024-09-04 12:30:02.180241",
+ "modified_by": "Administrator",
+ "module": "Padmavati_CRM",
+ "name": "Geographic Location",
+ "naming_rule": "Expression",
+ "nsm_parent_field": "parent_geographic_location",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

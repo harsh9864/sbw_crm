@@ -1,0 +1,73 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-09-05 17:24:10.755554",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item_group",
+  "weekstart",
+  "weekend",
+  "daily_target",
+  "weeklytarget",
+  "monthlytarget"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "fieldname": "weekend",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Week End"
+  },
+  {
+   "columns": 2,
+   "fieldname": "weekstart",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Week Start"
+  },
+  {
+   "columns": 1,
+   "fieldname": "weeklytarget",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Weekly Target"
+  },
+  {
+   "columns": 1,
+   "fieldname": "monthlytarget",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Monthly Target"
+  },
+  {
+   "columns": 2,
+   "fieldname": "item_group",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item Group",
+   "options": "Item Group"
+  },
+  {
+   "columns": 2,
+   "fieldname": "daily_target",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Daily Target"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-09-05 17:44:23.565439",
+ "modified_by": "Administrator",
+ "module": "Padmavati_CRM",
+ "name": "Sales Person Targets Table",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
