@@ -15,6 +15,7 @@
   "street",
   "section_break_aafo",
   "item_target_table",
+  "lead_target",
   "target_details_section",
   "include_sundays",
   "consider_holiday_list",
@@ -26,7 +27,11 @@
   "section_break_liva",
   "sales_person_list",
   "target_overview_tab",
-  "target_summary"
+  "target_summary",
+  "quantity_target_overview_tab",
+  "target_quantity_summary",
+  "lead_target_overview_tab",
+  "lead_summary"
  ],
  "fields": [
   {
@@ -63,7 +68,7 @@
   {
    "fieldname": "target_details_section",
    "fieldtype": "Section Break",
-   "label": "Target Details"
+   "label": "Target Timeline"
   },
   {
    "fieldname": "from",
@@ -116,6 +121,7 @@
    "options": "Employee Table"
   },
   {
+   "description": "Set the Item Group, its target quantity and target amount",
    "fieldname": "item_target_table",
    "fieldtype": "Table",
    "label": "Item Target",
@@ -136,18 +142,45 @@
   {
    "fieldname": "target_overview_tab",
    "fieldtype": "Tab Break",
-   "label": "Target Overview"
+   "label": "Amount Target Overview"
   },
   {
    "fieldname": "target_summary",
    "fieldtype": "Table",
    "label": "Target Summary",
-   "options": "Sales Person Targets Table"
+   "options": "Amount Targets Table"
+  },
+  {
+   "fieldname": "quantity_target_overview_tab",
+   "fieldtype": "Tab Break",
+   "label": "Quantity Target Overview"
+  },
+  {
+   "fieldname": "target_quantity_summary",
+   "fieldtype": "Table",
+   "label": "Target Quantity Summary",
+   "options": "Quantity Target Table"
+  },
+  {
+   "fieldname": "lead_target",
+   "fieldtype": "Int",
+   "label": "Lead Target"
+  },
+  {
+   "fieldname": "lead_target_overview_tab",
+   "fieldtype": "Tab Break",
+   "label": "Lead Target Overview"
+  },
+  {
+   "fieldname": "lead_summary",
+   "fieldtype": "Table",
+   "label": "Lead Summary",
+   "options": "Lead Target Table"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-09-05 17:28:26.458240",
+ "modified": "2024-09-06 12:50:21.124500",
  "modified_by": "Administrator",
  "module": "Padmavati_CRM",
  "name": "Sales Person Target Allocation",

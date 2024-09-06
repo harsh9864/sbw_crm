@@ -125,7 +125,7 @@ def get_weeks_with_dates(dates_str):
 
 
 @frappe.whitelist()
-def calculate_targets(dates_info, daily_target, current_date, itemGroup):
+def calculate_targets(dates_info, current_date, itemGroup, uom, daily_target=0, daily_quantity=0, lead_target=0):
     if isinstance(dates_info, str):
         dates_info = json.loads(dates_info)
 
@@ -147,13 +147,18 @@ def calculate_targets(dates_info, daily_target, current_date, itemGroup):
             if datetime.strptime(date, "%Y-%m-%d").date() >= current_date
         ]
 
-        # Calculate the weekly target
+        # Calculate the weekly target, weekly quantity, and weekly lead target
         weekly_target = len(remaining_days) * int(daily_target)
+        weekly_quantity = len(remaining_days) * int(daily_quantity)
+        weekly_lead_target = len(remaining_days) * int(lead_target)
+        
         weekly_targets.append(
             {
                 "weekStart": week["weekStart"],
                 "weekEnd": week["weekEnd"],
                 "weeklyTarget": weekly_target,
+                "weeklyQuantity": weekly_quantity,
+                "weeklyLeadTarget": weekly_lead_target
             }
         )
 
@@ -175,7 +180,13 @@ def calculate_targets(dates_info, daily_target, current_date, itemGroup):
     for month, dates in month_days.items():
         working_days_count = len(dates)
         monthly_target = working_days_count * int(daily_target)
-        monthly_targets[month] = monthly_target
+        monthly_quantity = working_days_count * int(daily_quantity)
+        monthly_lead_target = working_days_count * int(lead_target)
+        monthly_targets[month] = {
+            "monthlyTarget": monthly_target,
+            "monthlyQuantity": monthly_quantity,
+            "monthlyLeadTarget": monthly_lead_target
+        }
 
     for week in weekly_targets:
         week_start = datetime.strptime(week["weekStart"], "%Y-%m-%d").date()
@@ -189,9 +200,14 @@ def calculate_targets(dates_info, daily_target, current_date, itemGroup):
             # Use the month of the week_start
             week_month = week_start.strftime("%Y-%m")
 
-        week["monthlyTarget"] = monthly_targets.get(week_month, 0)
+        week["monthlyTarget"] = monthly_targets.get(week_month, {}).get("monthlyTarget", 0)
+        week["monthlyQuantity"] = monthly_targets.get(week_month, {}).get("monthlyQuantity", 0)
+        week["monthlyLeadTarget"] = monthly_targets.get(week_month, {}).get("monthlyLeadTarget", 0)
         week["dailyTarget"] = daily_target
+        week["dailyQuantity"] = daily_quantity
+        week["dailyLeadTarget"] = lead_target
         week["ItemGroup"] = itemGroup
+        week["uom"] = uom
 
     return {
         "weeklyTargets": weekly_targets,
@@ -201,3 +217,5 @@ def calculate_targets(dates_info, daily_target, current_date, itemGroup):
             "monthlyTargets": monthly_targets,
         },
     }
+
+
