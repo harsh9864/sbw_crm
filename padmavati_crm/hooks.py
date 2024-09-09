@@ -247,4 +247,9 @@ doctype_js = {"Lead": "public/js/lead.js",
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
 
-fixtures = []
+fixtures = [{
+    "dt": "Custom Field",
+    "filters": [
+        ["module", "=", "Padmavati_CRM"]
+    ]
+}]

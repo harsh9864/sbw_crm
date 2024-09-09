@@ -1,11 +1,72 @@
-<div class="row">
-    <div class="col border mr-3">
-        Column
+<div class="row number-container">
+    <div class="col border mr-3 today_target">
+        Today
     </div>
-    <div class="col border mr-3">
-        Column
+    <div class="col border mr-3 weekly_target">
+        This Week
     </div>
-    <div class="col border">
-        Column
+    <div class="col border mr-3 monthly_target">
+        This Month
     </div>
+    <div class="col border mr-3 quarterly_target">
+        This Quarter
+    </div>
+    <div class="col border yearly_target">
+        This Year
+    </div>
+</div>
+<div class="report-container">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <h3 style="margin : 0px; font-weight: 600;">Lead Details</h3>
+        <div style="display:  flex; gap: 20px; align-items: center;">
+            <label>From</label>
+            <input type="date" style="padding : 8px"/>
+    
+            <label>To</label>
+            <input type="date" style="padding : 8px"/>
+            <div>
+                <select class="filters_selection">
+                    <option>Today</option>
+                    <option>Last Week</option>
+                    <option>Yesterday</option>
+                    <option>This Week</option>
+                    <option>This Month</option>
+                    <option>Last Month</option>
+                    <option>This Year</option>
+                    <option>Last Year</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Lead ID</th>
+                <th>Full Name</th>
+                <th>Organization</th>
+                <th>Industry</th>
+                <th>Mobile Number</th>
+                <th>Qualification Status</th>
+            </tr>
+        </thead>
+        <tbody id="lead-report-data">
+            <tr>
+                <td>9115101035-Lead-001</td>
+                <td>Deep Parmar</td>
+                <td>Sanskar Technolabs</td>
+                <td>Technical</td>
+                <td>9865329865</td>
+                <td>Unqualified</td>
+            </tr>
+            <tr>
+                <td>9115101035-Lead-002</td>
+                <td>Ujjwal Aggrawal</td>
+                <td>Silver Blue Water</td>
+                <td>Mechnical</td>
+                <td>9265329865</td>
+                <td>Qualified</td>
+            </tr>
+        </tbody>
+    </table>
 </div>

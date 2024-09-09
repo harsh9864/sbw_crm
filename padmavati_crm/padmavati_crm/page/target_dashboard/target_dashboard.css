@@ -1,0 +1,79 @@
+.target-item,
+.target-lead {
+    padding-top: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.target-item h5,
+.target-lead h5 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    letter-spacing: 0.5px;
+}
+
+.today_target,
+.weekly_target,
+.monthly_target,
+.quarterly_target,
+.yearly_target {
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.number-container{
+    padding : 0px 15px;
+}
+
+.report-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    padding: 20px;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+}
+
+.filters_selection {
+    padding: 10px;
+}
+
+table {
+    margin-top: 15px;
+    width: 100%;
+    border-collapse: collapse;
+    overflow-x: scroll;
+}
+
+table th,
+table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+    width: 200px;
+}
+
+table th {
+    background-color: #b1bac4;
+    color: black;
+    font-weight: 700;
+}
+
+table tr {
+    background-color: #f2f2f2;
+}
+
+table tr:hover {
+    background-color: #ddd;
+}
